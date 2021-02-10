@@ -1,6 +1,5 @@
 """
 Write a class BaseModel that defines all common attributes/methods for other classes:
-
 models/base_model.py
 Public instance attributes:
 id: string - assign with an uuid when an instance is created:
