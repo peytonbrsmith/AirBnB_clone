@@ -3,7 +3,7 @@
 
 
 # Imports the Base Model Class
-BaseModel = __import__('BaseModel').BaseModel
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
@@ -39,3 +39,7 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
+
+    def __init__(self):
+        """Initializes with parent attributes"""
+        super(Place, self).__init__()

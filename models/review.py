@@ -3,7 +3,7 @@
 
 
 # Imports the Base Model Class
-BaseModel = __import__('BaseModel').BaseModel
+from models.base_model import BaseModel
 
 
 class Review(BaseModel):
@@ -22,3 +22,7 @@ class Review(BaseModel):
     place_id = ""
     user_id = ""
     text = ""
+
+    def __init__(self):
+        """Initializes with parent attributes"""
+        super(Review, self).__init__()

@@ -3,7 +3,7 @@
 
 
 # Imports the Base Model Class
-BaseModel = __import__('BaseModel').BaseModel
+from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
@@ -18,3 +18,7 @@ class Amenity(BaseModel):
 
     """
     name = ""
+
+    def __init__(self):
+        """Initializes with parent attributes"""
+        super(Amenity, self).__init__()

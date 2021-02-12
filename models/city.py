@@ -3,7 +3,7 @@
 
 
 # Imports the Base Model Class
-BaseModel = __import__('BaseModel').BaseModel
+from models.base_model import BaseModel
 
 
 class City(BaseModel):
@@ -19,3 +19,7 @@ class City(BaseModel):
     """
     name = ""
     state_id = ""
+
+    def __init__(self):
+        """Initializes with parent attributes"""
+        super(City, self).__init__()
