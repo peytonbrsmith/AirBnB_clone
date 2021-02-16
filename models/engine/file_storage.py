@@ -30,7 +30,7 @@ class FileStorage():
         save(self): serializes __objects to the JSON file (path: __file_path)
         reload(self): deserializes the JSON file to __objects
     """
-    __file_path = ""
+    __file_path = "file.json"
     __objects = {}
 
     def all(self):
@@ -44,15 +44,16 @@ class FileStorage():
         Key Format: <obj class name>.<id>
             Ex: BaseModel.12121212
         """
-        self.__objects.update({obj.__name__:obj.id})
+        keystr = str(obj.__class__.__name__) + str(".") + obj.id
+        self.__objects.update({keystr:obj.to_dict()})
 
     def save(self):
         """serializes __objects to the JSON file"""
-        with open(self.__file_path, mode='w+', encoding="utf-8") as myFile:
+        with open(self.__file_path, mode='w+') as myFile:
             return myFile.write(json.dumps(self.__objects))
 
     def reload(self):
         """deserializes the JSON file to __objects"""
-        with open(self.__file_path, mode='r', encoding="utf-8") as myFile:
+        with open(self.__file_path, mode='r') as myFile:
             self.__objects = json.loads(myFile.read())
             return
