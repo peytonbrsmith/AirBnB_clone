@@ -63,5 +63,5 @@ class FileStorage():
         with open(self.__file_path, mode='r') as myFile:
             json_dict = json.load(myFile)
         for key, value in json_dict.items():
-                key_class = classes.get(key.split('.')[0])
-                self.__objects[key] = key_class(**value)
+            key_class = classes.get(key.split('.')[0])
+            self.__objects[key] = key_class(**value)

@@ -18,7 +18,3 @@ class State(BaseModel):
 
     """
     name = ""
-
-    def __init__(self):
-        """Initializes with parent attributes"""
-        super(State, self).__init__()

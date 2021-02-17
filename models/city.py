@@ -19,7 +19,3 @@ class City(BaseModel):
     """
     name = ""
     state_id = ""
-
-    def __init__(self):
-        """Initializes with parent attributes"""
-        super(City, self).__init__()

@@ -18,7 +18,3 @@ class Amenity(BaseModel):
 
     """
     name = ""
-
-    def __init__(self):
-        """Initializes with parent attributes"""
-        super(Amenity, self).__init__()
