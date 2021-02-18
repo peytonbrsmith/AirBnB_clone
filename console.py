@@ -25,15 +25,13 @@ class HBNBCommand(cmd.Cmd):
     """
 
 # Defaults
-
-    def __init__(self):
-        """initializes the HBNB command class"""
-    # inits parent class attributes
-        super(HBNBCommand, self).__init__()
-    # sets CMD and HBNBCommand attributes
-        self.prompt = "(hbnb) "
-        if not sys.stdin.isatty():
-            self.prompt = "(hbnb) \n"
+    prompt = "(hbnb) "
+    # def __init__(self):
+    #     """initializes the HBNB command class"""
+    # # inits parent class attributes
+    #     super(HBNBCommand, self).__init__()
+    # # sets CMD and HBNBCommand attributes
+    #     self.prompt = "(hbnb) "
 
     # overrides default empty line behavior of repeating
     # last working command
