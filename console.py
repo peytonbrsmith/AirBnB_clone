@@ -2,6 +2,7 @@
 """The entry point to the HBnB console"""
 
 
+import sys
 import cmd
 from models.base_model import BaseModel
 from models.state import State
@@ -31,6 +32,8 @@ class HBNBCommand(cmd.Cmd):
         super(HBNBCommand, self).__init__()
     # sets CMD and HBNBCommand attributes
         self.prompt = "(hbnb) "
+        if not sys.stdin.isatty():
+            self.prompt = "(hbnb) \n"
 
     # overrides default empty line behavior of repeating
     # last working command
@@ -221,7 +224,6 @@ class HBNBCommand(cmd.Cmd):
             if key_exists is not True:
                 print("** no instance found **")
 
-# only starts loop if interactive
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()
