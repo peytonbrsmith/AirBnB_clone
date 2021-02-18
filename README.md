@@ -24,7 +24,7 @@ All code follows PEP8 coding standards and Google Style Python Docstring Documen
 
 ## Tech/Framework Used
 <b>Built with</b>
-![language] (https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreepngimg.com%2Finternet%2Fpython-logo&psig=AOvVaw2WRLatNGSk0P1Q_wtgvq4j&ust=1613751678834000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKifuNHr8-4CFQAAAAAdAAAAABAJ)
+- Python3
 
 ## Features
 - Store Objects
@@ -37,7 +37,8 @@ All code follows PEP8 coding standards and Google Style Python Docstring Documen
 ## Code Example
 
 <b> Console Interactive mode </b>
-`$ ./console.py
+```
+$ ./console.py
 (hbnb) help
 
 Documented commands (type help <topic>):
@@ -47,10 +48,12 @@ EOF  help  quit
 (hbnb)
 (hbnb)
 (hbnb) quit
-$`
+$
+```
 
 <b> Console Non-Interactive Mode</b>
-`$ echo "help" | ./console.py
+```
+$ echo "help" | ./console.py
 (hbnb)
 
 Documented commands (type help <topic>):
@@ -68,7 +71,8 @@ Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
 (hbnb)
-$`
+$
+```
 
 ## Installation
 
