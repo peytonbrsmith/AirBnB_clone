@@ -3,7 +3,9 @@
 This module initializes the Storage Engine
 """
 
+
 from models.engine.file_storage import FileStorage
+
 
 # Creates variable storage of class FileStorage
 storage = FileStorage()

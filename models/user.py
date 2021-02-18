@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Handles the User class"""
 
+
 # Imports the Base Model Class
 from models.base_model import BaseModel
 
