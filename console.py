@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """The entry point to the HBnB console"""
+
+
 import cmd
 from models.base_model import BaseModel
 from models.state import State
@@ -41,14 +43,6 @@ class HBNBCommand(cmd.Cmd):
         """enables exiting of the cmd loop"""
         return True
 
-# Runs Commands
-
-    # checks for existance of command
-    # def onecmd(self, line):
-    #     """compares given command to available commands"""
-    #     iscommand = super(HBNBCommand, self).onecmd(line)
-    #     return (iscommand)
-
 # All Support Commands:
 
     # Quit command to exit the program
@@ -56,14 +50,9 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program"""
         exit()
 
-    # def help_quit(self):
-    #     """ help info for quit and eof command """
-    #     print("Quit command to exit the program\n")
-
-    # Makes eof command point to quit code
-    # makes document the same too
-    do_EOF = do_quit
-    # help_EOF = help_quit
+    def do_EOF(self, s):
+        """Sends end of file to quit"""
+        exit()
 
     def do_create(self, model_type="None"):
         """
@@ -128,16 +117,6 @@ class HBNBCommand(cmd.Cmd):
                         break
             if key_exists is not True:
                 print("** no instance found **")
-        # else:
-        #     for key, value in storage.all().items():
-        #         if key.split('.')[0] == class_name:
-        #             if key.split('.')[1] == model_id:
-        #                 print(storage.all().get(key))
-        #             else:
-        #                 print("** no instance found **")
-        #                 break
-        #         else:
-        #             print("** no instance found **")
 
     def do_destroy(self, model_key=None):
         """
