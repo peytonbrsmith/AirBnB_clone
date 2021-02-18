@@ -1,6 +1,6 @@
 ## Project title
-0x00. AirBnB clone - The console
-Foundations - Higher-level programming ― AirBnB clone
+-0x00. AirBnB clone - The console
+-Foundations - Higher-level programming ― AirBnB clone
 
 ## Motivation
 The purpose of this project is to take the first step towards building a students' first full web application: The AirBnB clone. The first step is very important because it will use what is built during this project in all other following projects.
@@ -20,7 +20,6 @@ By the end of this project, students successfully learned:
 ## Code Style
 All code follows PEP8 coding standards and Google Style Python Docstring Documentation.
 
-## Screenshots
 
 ## Tech/Framework Used
 <b>Built with</b>
