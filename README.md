@@ -75,9 +75,15 @@ $
 ```
 
 ## Installation
+```
+$ git clone https://github.com/peytonbrsmith/AirBnB_clone.git
+```
 
+There are no additional libraries or dependencies for this program.
 
 ## Tests
 
 
 ## How to Use
+![interactive mode](https://github.com/peytonbrsmith/AirBnB_clone/blob/main/images/consoleint.png)
+![non-interactive mode](https://github.com/peytonbrsmith/AirBnB_clone/blob/main/images/consolenonint.png)
