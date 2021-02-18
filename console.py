@@ -168,6 +168,7 @@ class HBNBCommand(cmd.Cmd):
         if model_type == "":
             for obj in storage.all().values():
                 obj_list.append(obj.__str__())
+            print(obj_list)
         elif model_type not in ["BaseModel", "City", "State",
                                 "User", "Review", "Place", "Amenity"]:
             print("** class doesn't exist **")
@@ -175,7 +176,7 @@ class HBNBCommand(cmd.Cmd):
             for obj in storage.all().values():
                 if obj.__class__.__name__ == model_type:
                     obj_list.append(obj.__str__())
-        print(obj_list)
+            print(obj_list)
 
     def do_update(self, model_info):
         """

@@ -32,27 +32,23 @@ class BaseModel:
             self.updated_at = self.created_at
             models.storage.new(self)
 
+    def __str__(self):
+        """String Representation of BaseModel"""
+        return "[{:s}] ({:s}) {}".format(self.__class__.__name__, self.id,
+                                         self.__dict__)
 
-def __str__(self):
-    """String Representation of BaseModel"""
-    return "[{:s}] ({:s}) {}".format(self.__class__.__name__, self.id,
-                                     self.__dict__)
+    def save(self):
+        """Saves object"""
+        self.updated_at = datetime.now()
+        models.storage.new(self)
+        models.storage.save()
 
-
-def save(self):
-    """Saves object"""
-    self.updated_at = datetime.now()
-    models.storage.new(self)
-    models.storage.save()
-
-
-def to_dict(self):
-    """Returns a dictionary representation of the object"""
-    _dict = self.__dict__.copy()
-
-    if "created_at" in _dict:
-        _dict["created_at"] = self.created_at.isoformat()
-    if "updated_at" in _dict:
-        _dict["updated_at"] = self.updated_at.isoformat()
-    _dict["__class__"] = self.__class__.__name__
-    return _dict
+    def to_dict(self):
+        """Returns a dictionary representation of the object"""
+        _dict = self.__dict__.copy()
+        if "created_at" in _dict:
+            _dict["created_at"] = self.created_at.isoformat()
+        if "updated_at" in _dict:
+            _dict["updated_at"] = self.updated_at.isoformat()
+        _dict["__class__"] = self.__class__.__name__
+        return _dict
