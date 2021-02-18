@@ -23,7 +23,7 @@ class FileStorage():
 
     Private class attributes:
         __file_path: string - path to the JSON file
-        __objects: dictionary - empty but will store all objects by <class name>.id
+        __objects: dictionary - will store all objects by <class name>.id
 
     Public instance methods:
         all(self): returns the dictionary __objects
@@ -57,8 +57,8 @@ class FileStorage():
         """deserializes the JSON file to __objects"""
 
         classes = {"BaseModel": BaseModel, "User": User, "State": State,
-                    "City": City, "Amenity": Amenity, "Place": Place,
-                    "Review": Review}
+                   "City": City, "Amenity": Amenity, "Place": Place,
+                   "Review": Review}
 
         with open(self.__file_path, mode='r') as myFile:
             json_dict = json.load(myFile)

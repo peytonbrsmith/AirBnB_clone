@@ -111,12 +111,12 @@ class HBNBCommand(cmd.Cmd):
                 model_id = model_key.split(" ")[1]
             except IndexError:
                 pass
-        if class_name == None:
+        if class_name is None:
             print("** class name missing **")
         elif class_name not in ["BaseModel", "City", "State",
                                 "User", "Review", "Place", "Amenity"]:
             print("** class doesn't exist **")
-        elif model_id == None:
+        elif model_id is None:
             print("** instance id missing **")
         else:
             model_key = class_name + "." + model_id
@@ -125,7 +125,7 @@ class HBNBCommand(cmd.Cmd):
                 if key == model_key:
                         print(storage.all().get(key))
                         key_exists = True
-                        break;
+                        break
             if key_exists is not True:
                 print("** no instance found **")
         # else:
@@ -154,20 +154,20 @@ class HBNBCommand(cmd.Cmd):
                 model_id = model_key.split(" ")[1]
             except IndexError:
                 pass
-        if class_name == None:
+        if class_name is None:
             print("** class name missing **")
         elif class_name not in ["BaseModel", "City", "State",
                                 "User", "Review", "Place", "Amenity"]:
             print("** class doesn't exist **")
-        elif model_id == None:
+        elif model_id is None:
             print("** instance id missing **")
         else:
             model_key = class_name + "." + model_id
             delkey = None
             for key in storage.all().keys():
                 if key == model_key:
-                        delkey = key;
-                        break;
+                        delkey = key
+                        break
             if delkey is not None:
                 storage.all().pop(key)
                 storage.save()
@@ -203,7 +203,8 @@ class HBNBCommand(cmd.Cmd):
         Updates an instance based on the class name and id by adding or
         updating attribute (save the change into the JSON file).
 
-        Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holbertonschool.com".
+        Ex: $ update BaseModel 1234-1234-1234
+        email "aibnb@holbertonschool.com".
         """
         model_type = None
         model_id = None
@@ -220,13 +221,13 @@ class HBNBCommand(cmd.Cmd):
                     model_attrval += " " + model_info.split(" ")[4].strip('"')
             except IndexError:
                 pass
-        if model_type == None:
+        if model_type is None:
             print("** class name missing **")
-        elif model_id == None:
+        elif model_id is None:
             print("** instance id missing **")
-        elif model_attr == None:
+        elif model_attr is None:
             print("** attribute name missing **")
-        elif model_attrval == None:
+        elif model_attrval is None:
             print("** value missing **")
         else:
             model_key = model_type + "." + model_id
@@ -236,7 +237,7 @@ class HBNBCommand(cmd.Cmd):
                     obj = storage.all().get(key)
                     setattr(obj, model_attr, model_attrval)
                     key_exists = True
-                    break;
+                    break
             if key_exists is not True:
                 print("** no instance found **")
 
