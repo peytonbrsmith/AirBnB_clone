@@ -33,7 +33,7 @@ All code follows PEP8 coding standards and Google Style Python Docstring Documen
 - Print all the string representation of all instances based or not on the class name
 - Update an instance based on the class name and id by adding or updating attribute
 
-## Code Example
+## Example/Usage
 
 <b> Console Interactive mode </b>
 ```
@@ -44,6 +44,16 @@ Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
 
+(hbnb)
+(hbnb) create BaseModel
+5a93fdce-c58b-41b2-9883-94a50bae1513
+(hbnb) show BaseModel 5a93fdce-c58b-41b2-9883-94a50bae1513
+[BaseModel] (5a93fdce-c58b-41b2-9883-94a50bae1513) {'created_at': datetime.datetime(2021, 2, 26, 1, 52, 1, 94611), 
+'id': '5a93fdce-c58b-41b2-9883-94a50bae1513', 'updated_at': datetime.datetime(2021, 2, 26, 1, 52, 1, 94611)}
+(hbnb) update BaseModel 5a93fdce-c58b-41b2-9883-94a50bae1513 name Betty
+(hbnb) show BaseModel 5a93fdce-c58b-41b2-9883-94a50bae1513
+[BaseModel] (5a93fdce-c58b-41b2-9883-94a50bae1513) {'created_at': datetime.datetime(2021, 2, 26, 1, 52, 1, 94611), 
+'updated_at': datetime.datetime(2021, 2, 26, 1, 52, 1, 94611), 'id': '5a93fdce-c58b-41b2-9883-94a50bae1513', 'name': 'Betty'}
 (hbnb)
 (hbnb)
 (hbnb) quit
